@@ -18,7 +18,7 @@ public class Test {
 		configuration.configure("myproject/employee/resources/hibernate.cfg.xml");
 		sessionFactory = configuration.buildSessionFactory();
 		session = sessionFactory.openSession();
-		Employee employee = (Employee)session.get(Employee.class, 8);
+		Employee employee = (Employee)session.get("myproject.employee.pojo.Employee", 8);
 		System.out.println(employee.getEno());
 		System.out.println(employee.getEname());
 		System.out.println(employee.getEsal());
